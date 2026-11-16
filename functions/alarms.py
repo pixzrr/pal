@@ -18,7 +18,36 @@ def set_alarm(donnees):
     nom_alarme = donnees["nom"]
     heure_alarme = donnees["heure"]
     jours_alarme = donnees["jours"]
-    intervalle_alarme = donnees["intervalle"]
+
+
+    # -------------------------------------------
+    intervalle_brute = donnees["intervalle"]
+    intervalle_alarme = 0
+    
+    h = 0
+    m = 0
+    s = 0
+    match_h = re.search(r"(\d+)\s*(?:h|heure|heures)\s*(?:avec|et|.)\s*(\d+)", intervalle_brute)
+    match_m = re.search(r"(\d+)\s*(?:m|min|minute|minutes)\s*(?:avec|et|.)\s*(\d+)", intervalle_brute)
+    #(\d+) → nombre d'heures     \s* → zéro ou plusieurs espaces       h → la lettre h       \s* → zéro ou plusieurs espaces     (\d+) → nombre de minutes    ?: → val. non recuperable
+    
+    if match_h:
+        h = int(match_h.group(1))
+        m = int(match_h.group(2))
+    elif match_m:
+        m = int(match_m.group(1))
+        s = int(match_m.group(2))
+    elif re.search(r"(s|sec|seconde|secondes)", intervalle_brute):
+        s = int(re.search(r"(\d+)", intervalle_brute).group(1))
+    elif re.search(r"(m|min|minute|minutes)", intervalle_brute):
+        m = int(re.search(r"(\d+)", intervalle_brute).group(1))
+    elif re.search(r"(h|heure|heures)", intervalle_brute):
+        h = int(re.search(r"(\d+)", intervalle_brute).group(1))
+    
+    intervalle_alarme = h * 3600 + m * 60 + s
+    # -------------------------------------------
+
+
     actions_alarme = donnees["actions"]
     jetable_alarme = donnees["jetable"]
 
