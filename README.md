@@ -18,7 +18,7 @@ artificielle, logiciel et composants physiques
 
 ## Aperçu
 
-<img width="660" height="364" alt="image" src="https://github.com/user-attachments/assets/8a8286e3-c71a-4a7f-8f53-bdd9c2f5ecd9" />
+<img width="790" height="244" alt="image" src="https://github.com/user-attachments/assets/dcce9a00-c092-4dcc-9828-83625549eaea" />
 
 *Interface graphique de PAL --- prototype en cours de développement.*
 
