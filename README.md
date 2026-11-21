@@ -26,29 +26,26 @@ artificielle, logiciel et composants physiques
 
 Voici les technologies utilisées (pour l'instant):
 
-  -----------------------------------------------------------------------
-  Technologie                         Utilisation
-  ----------------------------------- -----------------------------------
-  Python                              Logique applicative et traitement
+  Python                 |             Logique applicative et traitement
                                       des commandes
 
-  FastAPI                             Serveur HTTP et API
+  FastAPI                |             Serveur HTTP et API
 
-  Ollama                              Exécution locale des modèles de
+  Ollama                 |             Exécution locale des modèles de
                                       langage
 
-  Ministral 3 (8B)                    Identification de la fonction et
+  Ministral 3 (8B)       |             Identification de la fonction et
                                       génération de la réponse
 
-  Qwen 2.5 (3B)                       Identification de l'action
+  Qwen 2.5 (3B)           |            Identification de l'action
 
-  HTML / CSS                          Structure et présentation de
+  HTML / CSS               |           Structure et présentation de
                                       l'interface
 
-  JavaScript                          Communication entre l'interface et
+  JavaScript                |          Communication entre l'interface et
                                       le backend
 
-  MQTT                                Communication envisagée avec les
+  MQTT                     |           Communication envisagée avec les
                                       équipements connectés
   -----------------------------------------------------------------------
 
