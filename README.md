@@ -1,22 +1,5 @@
 # PAL
 
-```{=html}
-<p align="center">
-```
-`<strong>`{=html}Un assistant domestique virtuel, conçu pour centraliser
-et simplifier les interactions avec son environnement.`</strong>`{=html}
-```{=html}
-</p>
-```
-```{=html}
-<p align="center">
-```
-`<em>`{=html}Un projet personnel mêlant intelligence artificielle,
-développement logiciel et systèmes embarqués.`</em>`{=html}
-```{=html}
-</p>
-```
-
 ------------------------------------------------------------------------
 
 ## Présentation
