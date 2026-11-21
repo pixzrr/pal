@@ -43,7 +43,7 @@ Voici les technologies utilisées (pour l'instant):
   - MQTT
   -----------------------------------------------------------------------
 
-## Rôle des principaux modules
+## Organisation
 
 -   `main.py` : point d'entrée du backend, configuration de FastAPI et
     réception des requêtes.
@@ -64,7 +64,7 @@ Voici les technologies utilisées (pour l'instant):
 
 ### Prérequis
 
--   Python 3.10 ou supérieur
+-   Python 3.11 ou supérieur
 -   [Ollama](https://ollama.com/)
 -   Git (facultatif, pour cloner le dépôt)
 
