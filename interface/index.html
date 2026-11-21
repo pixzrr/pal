@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>pal</title>
+        <!-- <meta name="description" content="inutile"> -->
+        <!-- <meta name="author" content="inutile"> -->
+        <!-- <link rel="shortcut icon" href="inutile"> -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/pal/fichiers/css/style.css">
+    </head>
+    <body>
+
+        <main>
+            <div id="chat-container">
+                <h2 id="question">Comment puis-je vous aider ?</h2>
+                <script src="/pal/fichiers/js/daytask.js"></script>
+
+                <div id="chat-box">
+                    <input id="message" name="message" type="text" placeholder="Votre demande...">
+                    <button id="envoyer" type="submit" aria-label="Envoyer">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-up">
+                        <path d="m5 12 7-7 7 7"/>
+                        <path d="M12 19V5"/>
+                        </svg>
+                </button>
+                </div>
+                <div id="reponse-container">
+                    <p id="reponse"></p>
+                </div>
+            </div>
+        </main>
+
+        <script src="/pal/fichiers/js/chat.js"></script>
+    </body>

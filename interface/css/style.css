@@ -1,0 +1,158 @@
+*{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+/* ----------------- Fonts ----------------- */
+
+@font-face {
+  font-family: 'Playfair';
+  src: url('fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 400 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Caveat_cursive';
+  src: url('fonts/Caveat/Caveat-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 400 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto/Roboto-VariableFont_wdth\,wght.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+body{
+    background-color: #0a0500;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+#chat-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 35%;
+    margin-top: 10vh;
+
+    transition: 1s ease-out;
+}
+
+.sent{
+    transform: translateY(-10em);
+}
+
+h2 {
+    font-family: 'Caveat_cursive';
+    color: rgb(255, 238, 213);
+    font-size: 2.5rem;
+}
+
+#chat-box{
+    display: flex;
+    width: 100%;
+    height: 2.3rem;
+    margin-top: 1rem;
+    background-color: rgb(61, 61, 59, 0.7);
+    border-radius: 1em;
+    border: 2px solid rgba(151, 101, 9, 0);
+
+    transition: 0.3s ease-in-out;
+}
+
+#chat-box:focus-within{
+    border: 2px solid rgba(99, 67, 31, 0.938);
+}
+
+#chat-box input{
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto';
+    font-size: 0.9em;
+    margin-left: 0.5em;
+    border-radius: 1em 0 0 1em;
+    background-color: rgb(61, 61, 59, 0);
+    color: rgb(228, 228, 228);
+    border: none;
+    outline: none;
+}
+
+#chat-box button{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 0 1em 1em 0;
+    background-color: rgba(61, 60, 59, 0);
+    border: none;
+    outline: none;
+    margin-right: 0.2em;
+    cursor: pointer;
+}
+
+#chat-box button .arrow-up{
+    stroke: rgb(255, 238, 213);
+    stroke-width: 4px;
+
+    width: 1.5rem;
+    height: 1.5rem;
+
+    background-color: rgb(110, 61, 12, 0.7);
+    border-radius: 1em;
+    padding: 0.2em;
+
+    transition: 0.2s ease-out;
+}
+
+#chat-box button:hover .arrow-up{
+    background-color: rgb(110, 61, 12, 1);
+}
+
+#reponse-container {
+    width: 100%;
+    height: 30vh;
+    margin-top: 1rem;
+}
+
+#reponse {
+    width: 100%;
+    font-family: 'Playfair';
+    height: fit-content;
+    min-height: 3em;
+    color: rgb(255, 238, 213);
+    background-color: rgb(61, 61, 59, 0);
+    border-radius: 1em;
+}
+
+@keyframes response_wait_glow {
+    0%{
+        background-color: rgb(61, 61, 59, 0.05);
+    }
+    50% {
+        background-color: rgb(61, 61, 59, 0.2);
+    }
+    100% {
+        background-color: rgb(61, 61, 59, 0.05);
+    }
+}
+
+#reponse.waiting {
+    animation: response_wait_glow 2s ease-in-out infinite;
+}
+
+#reponse.responded {
+    transition: 0.5s ease-in-out;
+    background-color: rgb(61, 61, 59, 0);
+}

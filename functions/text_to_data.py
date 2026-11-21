@@ -6,6 +6,7 @@ def comprendre_commande(texte):
 
     retour = {
         "fonction": "",
+        "reponse": "",
         "action": "",
         "data": {}
     }
@@ -48,7 +49,7 @@ def comprendre_commande(texte):
     )
 
     retour["fonction"] = reponse_fonction["fonction"]
-    print(reponse_fonction["reponse"])
+    retour["reponse"] = reponse_fonction["reponse"]
 
     # ===================================================================== Etape 2 : Définir action ==================================================================
 
@@ -115,9 +116,9 @@ def comprendre_commande(texte):
                         "type": "array",
                         "items": {
                             "type": "integer",
-                            "enum": [0, 1, 2, 3, 4, 5, 6]
+                            "enum": [0, 1, 2, 3, 4, 5, 6, 99]
                         },
-                        "description": "Les jours de la semaine pour l'alarme (0-6, où 0 = lundi et 6 = dimanche)"
+                        "description": "Les jours de la semaine pour l'alarme (0-6, où 0 = lundi et 6 = dimanche). Si un ou plusieurs jours de la semaine ne sont pas explicitement donnés, choisir 99"
                     },
                     "intervalle": {
                         "type": "string",
@@ -143,7 +144,7 @@ def comprendre_commande(texte):
     # -------------------------------------------
 
     reponse_donnees = ollama.chat(
-            model = "qwen2.5:3b",
+            model = "ministral-3:8b",
             messages = [
                 {
                     "role": "system",
