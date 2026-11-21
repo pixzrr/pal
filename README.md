@@ -26,27 +26,21 @@ artificielle, logiciel et composants physiques
 
 Voici les technologies utilisées (pour l'instant):
 
-  Python                 |             Logique applicative et traitement
-                                      des commandes
-
-  FastAPI                |             Serveur HTTP et API
-
-  Ollama                 |             Exécution locale des modèles de
-                                      langage
-
-  Ministral 3 (8B)       |             Identification de la fonction et
-                                      génération de la réponse
-
-  Qwen 2.5 (3B)           |            Identification de l'action
-
-  HTML / CSS               |           Structure et présentation de
-                                      l'interface
-
-  JavaScript                |          Communication entre l'interface et
-                                      le backend
-
-  MQTT                     |           Communication envisagée avec les
-                                      équipements connectés
+  - Python
+    
+  - FastAPI
+    
+  - Ollama
+    
+  - Ministral 3 (8B)
+    
+  - Qwen 2.5 (3B)
+    
+  - HTML / CSS
+    
+  - JavaScript
+    
+  - MQTT
   -----------------------------------------------------------------------
 
 ## Rôle des principaux modules
@@ -77,7 +71,7 @@ Voici les technologies utilisées (pour l'instant):
 ### 1. Récupérer le projet
 
 ``` bash
-git clone <URL_DU_DEPOT>
+git clone https://github.com/pixzrr/pal/
 cd PAL
 ```
 
